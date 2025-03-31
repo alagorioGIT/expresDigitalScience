@@ -33,7 +33,7 @@ let heroeController = {
             return res.render('heroeBio', { title: titulo, heroe: hero, ok:ok, textoAdicional:textoAdicional})
         }
         if (hero === undefined) {
-            let errorText = `El ID ${id}, no existe en el archivo, elija otro`
+            let errorText = `El ID ${id}, no existe en el archivo, para mostrar su biografia, elija otro`
             return res.render('errorID', { title: titulo, errorText: errorText })
         }
         
