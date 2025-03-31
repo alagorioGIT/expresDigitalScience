@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+   
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div class="container" id="heroContainer">
+        <p>ID:<%= heroe.id %> Hola mi nombre es: <%= heroe.nombre %> y soy <%= heroe.profesion %></p>
+    </div>
+    
+    <a href="/heroes/bio/id/<%= heroe.id %>/ok">Ver Bio</a>
+    
+    <%- include('./partials/menu') %>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div class="container" id="heroContainer">
+        <p>ID:<%= heroe.id %> Hola mi nombre es: <%= heroe.nombre %> y soy <%= heroe.profesion %></p>
+        <% if (ok==='ok') {%>
+            <p>Mi Bio es: <%= heroe.resenia %></p>     
+        <% }else{%>
+                   <p><%= textoAdicional %></p>
+        <% } %>
+
+
+    </div>
+    <a href="/heroes/detalle/id/<%= heroe.id %>">Volver</a>    
+    
+    <%- include('./partials/menu') %>
+
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heroes</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <h1>Heroes</h1>
+    <p>Estás en la página de Heroes</p>
+    <!-- Lista se declara en el controlador -->
+    <h2>Lista de Heroes</h2>
+    <div class="container" id="listContainer">
+        <ul>
+
+            <% heroesList.forEach(function(heroe) { %>
+                <li><a href="/heroes/detalle/id/<%= heroe.id %>">
+                        <%= heroe.nombre %>
+                    </a></li>
+                <% }) %>
+        </ul>
+    </div>
+
+
+
+    <%- include('./partials/menu') %>
+
+</body>
+
+</html>
